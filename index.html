@@ -3,59 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agency Portfolio</title>
+    <title>NextGen AI & Web Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background-color: #0f172a; color: white; font-family: 'Inter', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { 
+            background-color: #050816; 
+            color: #ffffff; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.2) 0%, transparent 50%);
+        }
+        .accent-text {
+            background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .card { transition: transform 0.3s ease; border: 1px solid #1e293b; }
-        .card:hover { transform: translateY(-10px); border-color: #38bdf8; }
+        .hover-card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
 
-    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-        <div class="text-2xl font-bold gradient-text underline decoration-sky-500">AI GENIUS</div>
-        <div class="space-x-6 hidden md:block">
-            <a href="#services" class="hover:text-sky-400">Services</a>
-            <a href="#projects" class="hover:text-sky-400">Projects</a>
-            <a href="#contact" class="bg-sky-500 px-5 py-2 rounded-full font-semibold hover:bg-sky-600">Contact Us</a>
+    <nav class="fixed w-full z-50 glass py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tighter">NEXT<span class="text-indigo-500">GEN</span></div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-white">About</a>
+                <a href="#expertise" class="hover:text-white">Expertise</a>
+                <a href="#work" class="hover:text-white">Our Work</a>
+            </div>
+            <a href="#contact" class="bg-indigo-600 px-6 py-2 rounded-full text-sm font-bold hover:bg-indigo-700 transition">Let's Talk</a>
         </div>
     </nav>
 
-    <section class="text-center py-20 px-6">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Scale Your Business <br> with <span class="gradient-text">AI Automation</span></h1>
-        <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">මම AI තාක්ෂණය පාවිච්චි කරලා ඔයාගේ ව්‍යාපාරයේ වැඩකටයුතු වේගවත් කරලා දෙනවා. අපි Chatbots සහ Automation හරහා කාලය සහ මුදල් ඉතිරි කරමු.</p>
-        <div class="flex justify-center gap-4">
-            <button class="bg-sky-500 hover:bg-sky-600 px-8 py-3 rounded-lg font-bold">Get Started</button>
-            <button class="border border-slate-700 hover:bg-slate-800 px-8 py-3 rounded-lg font-bold">Watch Demo</button>
-        </div>
-    </section>
-
-    <section id="services" class="max-w-6xl mx-auto px-6 py-20">
-        <h2 class="text-3xl font-bold mb-12 text-center">මම ලබාදෙන සේවාවන්</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card p-8 rounded-2xl bg-slate-900/50">
-                <i class="fa-solid fa-robot text-sky-400 text-4xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Custom AI Chatbots</h3>
-                <p class="text-slate-400">Customer Support සහ Sales සඳහා බුද්ධිමත් Chatbots නිර්මාණය කිරීම.</p>
-            </div>
-            <div class="card p-8 rounded-2xl bg-slate-900/50">
-                <i class="fa-solid fa-bolt text-sky-400 text-4xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Workflow Automation</h3>
-                <p class="text-slate-400">අනවශ්‍ය ලේඛන කටයුතු සහ නීරස වැඩ AI හරහා ස්වයංක්‍රීය කිරීම.</p>
-            </div>
-            <div class="card p-8 rounded-2xl bg-slate-900/50">
-                <i class="fa-solid fa-pen-nib text-sky-400 text-4xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">AI Content Strategy</h3>
-                <p class="text-slate-400">AI පාවිච්චි කරලා ලස්සන Articles සහ Social Media Posts හැදීම.</p>
+    <section class="relative pt-32 pb-20 px-6 hero-gradient">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="px-4 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-widest">Web & AI Solutions</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mt-6 leading-tight">
+                We Build Websites That <br> <span class="accent-text italic">Work While You Sleep</span>
+            </h1>
+            <p class="mt-6 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                අපි සාමාන්‍ය වෙබ් අඩවි වලට වඩා එහා ගිය, AI සහ Automation මගින් ක්‍රියාත්මක වන Smart Business සිස්ටම් නිර්මාණය කරනවා. 
+            </p>
+            <div class="mt-10 flex flex-col md:flex-row justify-center gap-4">
+                <a href="#work" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition">View Projects</a>
+                <a href="#expertise" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">AI Services</a>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="max-w-6xl
+    <section id="expertise" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center">මම කරන ප්‍රධාන වැඩ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded-3xl hover-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 text-indigo-400">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modern Web Design</h3>
+                    <p class="text-gray-400 text-sm">මම මේ වෙනකොටත් ලංකාවේ ප්‍රමුඛ පෙළේ සමාගම් කිහිපයකට ඉතා වේගවත් සහ ලස්සන වෙබ් අඩවි නිර්මාණය කරලා තියෙනවා.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover-card transition-all duration-300 border-indigo-500/50">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-400">
+                        <i class="fas fa-microchip text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI Agent Integration</h3>
+                    <p class="text-gray-400 text-sm">ඔයාගේ වෙබ් එකට එන Clients ලා එක්ක කතා කරලා, Appointments දාන AI Bot කෙනෙක් මම එකතු කරනවා.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover-card transition-all duration-300">
+                    <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-6 text-pink-400">
+                        <i class="fas fa-sync text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Workflow Automation</h3>
+                    <p class="text-gray-400 text-sm">Data entry, Email automation වැනි නීරස වැඩ AI හරහා ස්වයංක්‍රීයව සිදුවන ලෙස සකස් කිරීම.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-20 px-6 bg-[#070b1d]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div>
+                    <h2 class="text-4xl font-bold">Featured Projects</h2>
+                    <p class="text-gray-400 mt-2">මම කලින් කරපු සාර්ථක නිර්මාණ කිහිපයක්</p>
+                </div>
+                <div class="text-indigo-400 font-bold border-b border-indigo-400">View All Work</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl bg-gray-800 h-80 mb-6 border border-white/5 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                            <div>
+                                <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Web Development</span>
+                                <h3 class="text-2xl font-bold mt-2">Corporate Business Platform</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900 to-purple-900 h-80 mb-6 border border-white/5 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-robot text-7xl opacity-20"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                            <div>
+                                <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">AI Automation</span>
+                                <h3 class="text-2xl font-bold mt-2">Automated Lead System</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 text-center">
+        <div class="glass max-w-4xl mx-auto p-12 rounded-[3rem] border-indigo-500/20">
+            <h2 class="text-4xl font-bold mb-6">Let's Build Something <span class="accent-text">Legendary</span></h2>
+            <p class="text-gray-400 mb-10 text-lg">ඔයාගේ Business එක ඊළඟ මට්ටමට ගෙනියන්න සූදානම්ද?</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="mailto:your@email.com" class="text-xl font-bold border-b-2 border-white pb-1 hover:text-indigo-400 hover:border-indigo-400 transition">yourname@agency.com</a>
+                <span class="hidden md:block text-gray-600">/</span>
+                <div class="flex gap-4">
+                    <i class="fab fa-whatsapp text-2xl hover:text-green-400 cursor-pointer"></i>
+                    <i class="fab fa-linkedin text-2xl hover:text-blue-400 cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-sm">
+        &copy; 2026 NextGen Digital Agency. Made with ❤️ & Intelligence.
+    </footer>
+
+</body>
+</html>
